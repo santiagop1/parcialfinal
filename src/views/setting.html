@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mariadb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/main.css">
+</head>
+
+<body class=".bg-secondary ">
+    <div class="card container" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">BASES DE DATOS</h5>
+            <form action="{{ url_for('setting') }}" method="POST">
+            
+                <div class="mb-3">
+                    <label for="userName" class="form-label">Usuario:</label>
+                    <input type="text" class="form-control" id="userName" aria-describedby="emailHelp" name="userName">
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña:</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+
+                <div class="mb-3">
+                    <label for="dbServer" class="form-label">Nombre del host:</label>
+                    <input type="text" class="form-control" id="dbServer" aria-describedby="emailHelp" name="dbServer">
+                </div>
+
+                <div class="mb-3">
+                    <label for="dbPort" class="form-label">Puerto:</label>
+                    <input type="text" class="form-control" id="dbPort" aria-describedby="emailHelp" name="dbPort">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Listar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
